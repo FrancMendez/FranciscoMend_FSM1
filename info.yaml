@@ -6,8 +6,8 @@ project:
   description: "Incluye una FSM para desbloqueo de caja fuerte y un divisor de reloj tipo blinker"
   language: "verilog"
   tiles:
-    - user_module_fsm_unlock
-    - user_module_clk_blink
+    user_module_fsm_unlock: 1
+    user_module_clk_blink: 1
 
 modules:
   - name: "user_module_fsm_unlock"
@@ -19,4 +19,3 @@ modules:
     description: "Divisor de reloj que alterna una salida cada segundo"
     files:
       - "src/user_module_clk_blink.v"
-
