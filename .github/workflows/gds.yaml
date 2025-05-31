@@ -45,7 +45,21 @@ jobs:
     needs: gds
     runs-on: ubuntu-24.04
     permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
+      pages: write
+      id-token: write
     steps:
-      - uses: TinyTapeout/tt-gds-action/viewer@ttihp25b
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Viewer Files
+        uses: TinyTapeout/tt-gds-action/viewer@ttihp25b
+        with:
+          pdk: ihp
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "tt/tt_gds_artifacts/tt_viewer"
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v3
