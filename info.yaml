@@ -1,7 +1,30 @@
 project:
-  name: "FSM Ramp Controller"
+  name: "FSM"
   author: "Francisco Mendez"
   description: "FSM-based controller with prescaler and top module."
   language: "verilog"
   top_module: "Top_module"
   clock_hz: 10000000
+tiles: "1x1"
+uses_3v3: false
+
+pinout:
+  # Entradas digitales (ui)
+  ui:
+    - "IN0"
+    - "IN1"
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+  # Salidas digitales (uo)
+  uo:
+    - "OUT0"
+
+source_files:
+  - src/contador.v
+  - src/decodificador.v
+
+yaml_version: 6
