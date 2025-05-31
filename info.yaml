@@ -1,30 +1,41 @@
-project:
-  name: "FSM"
-  author: "Francisco Mendez"
-  description: "FSM-based controller with prescaler and top module."
-  language: "verilog"
-  top_module: "Top_module"
-  clock_hz: 10000000
-tiles: "1x1"
-uses_3v3: false
+top_module: FrancMend_top_module    # Cambia "tuusuario" por tu nombre o ID único
+tiles: "1x1"                             # Asumiendo que tu diseño cabe en un tile 1x1
+uses_3v3: false                         # No usas alimentación 3.3V (solo digital)
 
 pinout:
-  # Entradas digitales (ui)
-  ui:
-    - "IN0"
-    - "IN1"
+  ui:                                   # Entradas digitales (máximo 8)
+    - "clk"                            # clk
+    - "btnC"                           # botón central como reset
+    - "sw0"                            # sw[0]
+    - "sw1"                            # sw[1]
+    - "sw2"                            # sw[2]
+    - ""
+    - ""
+    - ""
+  uo:                                   # Salidas digitales (máximo 8)
+    - "led0"                           # led[0] señal de desbloqueo
+    - "led1"                           # led[1] aunque no se usa en el módulo, se puede dejar para completar
     - ""
     - ""
     - ""
     - ""
     - ""
     - ""
-  # Salidas digitales (uo)
-  uo:
-    - "OUT0"
+  uio:                                   # Pines bidireccionales (vacío en este caso)
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+
+analog_pins: 0                         # No usas pines analógicos
 
 source_files:
-  - src/contador.v
-  - src/decodificador.v
-
+  - src/top_module.v                   # Ruta y nombre del archivo Verilog (ajusta según tu estructura)
+  - src/clk_psc.v
+  - src/FSM1.v
 yaml_version: 6
+
