@@ -1,6 +1,6 @@
 project:
   name: "FSM Ramp Controller"
-  author: "Byron Rosales"
+  author: "Francisco Mendez"
   description: "FSM-based controller with prescaler and top module."
   language: "verilog"
   top_module: "Top_module"
