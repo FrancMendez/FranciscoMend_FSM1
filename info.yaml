@@ -1,21 +1,23 @@
 yaml_version: 6
 
 project:
-  title: "FSM y divisor de reloj"
-  author: "Francisco Mendoza"
-  description: "Incluye una FSM para desbloqueo de caja fuerte y un divisor de reloj tipo blinker"
+  name: "FSM Unlock System"
+  author: "Francisco Mendez"
+  description: "Sistema de control con FSM que desbloquea una salida según una secuencia de entradas."
   language: "verilog"
+  top_module: "top_module"
+  clock_hz: 1000000  # 1 MHz
+  github: "https://github.com/FrancMendez/FranciscoMend_FSM1"
+  documentation: "https://github.com/FrancMendez/FranciscoMend_FSM1/repositorio#readme"
+  inputs:
+    - clk
+    - btnC
+    - sw[0]
+    - sw[1]
+    - sw[2]
+  outputs:
+    - led[0]
+    - led[1]
+  parameters:
+    - clk
 
-modules:
-  - name: "user_module_fsm_unlock"
-    description: "FSM de desbloqueo de caja fuerte usando tres entradas (A, B, C)"
-    tiles: 1
-    files:
-      - "src/user_module_fsm_unlock.v"
-      - "src/FSM1.v"
-
-  - name: "user_module_clk_blink"
-    description: "Divisor de reloj que alterna una salida cada segundo"
-    tiles: 1
-    files:
-      - "src/user_module_clk_blink.v"
