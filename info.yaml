@@ -1,0 +1,7 @@
+project:
+  name: "FSM Ramp Controller"
+  author: "Byron Rosales"
+  description: "FSM-based controller with prescaler and top module."
+  language: "verilog"
+  top_module: "Top_module"
+  clock_hz: 10000000
