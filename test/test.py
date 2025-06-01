@@ -29,7 +29,9 @@ async def test_project(dut):
     dut.ui_in.value = 20
     dut.uio_in.value = 30
 
+    
     # Just pass...
+
     
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 1)
