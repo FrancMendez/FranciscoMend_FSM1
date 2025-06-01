@@ -15,8 +15,9 @@ project:
 
   # Archivos fuente del proyecto
   source_files:
-    - "counter.v"
-
+  - src/top_module.v                   # Ruta y nombre del archivo Verilog (ajusta según tu estructura)
+  - src/clk_psc.v
+  - src/FSM1.v
 # Pinout del proyecto
 pinout:
   # Entradas
