@@ -11,7 +11,7 @@ project:
   tiles: "1x1"                                 # Tamaño del diseño
 
   # Nombre del módulo top, debe empezar con tt_um_ y ser único
-  top_module:  "tt_um_carloslopez_counter"
+  top_module:  "tt_um_FrancMendez "
 
   # Archivos fuente del proyecto
   source_files:
