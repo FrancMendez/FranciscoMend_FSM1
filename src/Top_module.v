@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_module (
+module tt_um_FrancMendez (
     input clk,            // Reloj de 100MHz de la Basys3
     input btnC,           // Botón central como reset
     input [2:0] sw, // SW[2:0] como entradas A, B, C
